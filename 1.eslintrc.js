@@ -12,8 +12,7 @@ module.exports = {
     "space-before-function-paren": 0,
     "object-curly-spacing": ["error", "never"],
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-unused-vars': 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
   },
   parserOptions: {
     parser: '@typescript-eslint/parser'

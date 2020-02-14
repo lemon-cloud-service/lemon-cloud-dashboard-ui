@@ -800,6 +800,13 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
+"@improbable-eng/grpc-web@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@improbable-eng/grpc-web/-/grpc-web-0.12.0.tgz#9b10a7edf2a1d7672f8997e34a60e7b70e49738f"
+  integrity sha512-uJjgMPngreRTYPBuo6gswMj1gK39Wbqre/RgE0XnSDXJRg6ST7ZhuS53dFE6Vc2CX4jxgl+cO+0B3op8LA4Q0Q==
+  dependencies:
+    browser-headers "^0.4.0"
+
 "@intervolga/optimize-cssnano-plugin@^1.0.5":
   version "1.0.6"
   resolved "https://registry.npm.taobao.org/@intervolga/optimize-cssnano-plugin/download/@intervolga/optimize-cssnano-plugin-1.0.6.tgz#be7c7846128b88f6a9b1d1261a0ad06eb5c0fdf8"
@@ -1869,6 +1876,11 @@ brorand@^1.0.1:
   version "1.1.0"
   resolved "https://registry.npm.taobao.org/brorand/download/brorand-1.1.0.tgz#12c25efe40a45e3c323eb8675a0a0ce57b22371f"
   integrity sha1-EsJe/kCkXjwyPrhnWgoM5XsiNx8=
+
+browser-headers@^0.4.0:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/browser-headers/-/browser-headers-0.4.1.tgz#4308a7ad3b240f4203dbb45acedb38dc2d65dd02"
+  integrity sha512-CA9hsySZVo9371qEHjHZtYxV2cFtVj5Wj/ZHi8ooEsrtm4vOnl9Y9HmyYWk9q+05d7K3rdoAE0j3MVEFVvtQtg==
 
 browserify-aes@^1.0.0, browserify-aes@^1.0.4:
   version "1.2.0"
@@ -4193,7 +4205,7 @@ globule@^1.0.0:
     lodash "~4.17.12"
     minimatch "~3.0.2"
 
-google-protobuf@^3.11.3:
+google-protobuf@^3.11.3, google-protobuf@^3.6.1:
   version "3.11.3"
   resolved "https://registry.yarnpkg.com/google-protobuf/-/google-protobuf-3.11.3.tgz#660977f5de29cc8f647172a170602887102fa677"
   integrity sha512-Sp8E+0AJLxmiPwAk9VH3MkYAmYYheNUhywIyXOS7wvRkqbIYcHtGzJzIYicNqYsqgKmY35F9hxRkI+ZTqTB4Tg==
@@ -8412,6 +8424,13 @@ ts-pnp@^1.1.2:
   version "1.1.5"
   resolved "https://registry.npm.taobao.org/ts-pnp/download/ts-pnp-1.1.5.tgz?cache=0&sync_timestamp=1573378469258&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fts-pnp%2Fdownload%2Fts-pnp-1.1.5.tgz#840e0739c89fce5f3abd9037bb091dbff16d9dec"
   integrity sha1-hA4HOcifzl86vZA3uwkdv/Ftnew=
+
+ts-protoc-gen@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/ts-protoc-gen/-/ts-protoc-gen-0.12.0.tgz#932e5738f14b67e7202825b06f8c548cb7d8ef34"
+  integrity sha512-V7jnICJxKqalBrnJSMTW5tB9sGi48gOC325bfcM7TDNUItVOlaMM//rQmuo49ybipk/SyJTnWXgtJnhHCevNJw==
+  dependencies:
+    google-protobuf "^3.6.1"
 
 tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
   version "1.10.0"

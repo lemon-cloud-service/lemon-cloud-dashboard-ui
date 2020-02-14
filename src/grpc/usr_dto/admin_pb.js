@@ -1,4 +1,4 @@
-// source: protobuf/usr_dto/admin.proto
+// source: grpc/usr_dto/admin.proto
 /**
  * @fileoverview
  * @enhanceable

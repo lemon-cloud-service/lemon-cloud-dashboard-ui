@@ -1,4 +1,7 @@
-import * as jspb from "google-protobuf"
+// package: usr_dto
+// file: grpc/usr_dto/admin.proto
+
+import * as jspb from "google-protobuf";
 
 export class AdminLoginRequest extends jspb.Message {
   getNumber(): string;
@@ -10,6 +13,8 @@ export class AdminLoginRequest extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AdminLoginRequest.AsObject;
   static toObject(includeInstance: boolean, msg: AdminLoginRequest): AdminLoginRequest.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
   static serializeBinaryToWriter(message: AdminLoginRequest, writer: jspb.BinaryWriter): void;
   static deserializeBinary(bytes: Uint8Array): AdminLoginRequest;
   static deserializeBinaryFromReader(message: AdminLoginRequest, reader: jspb.BinaryReader): AdminLoginRequest;
@@ -32,6 +37,8 @@ export class AdminLoginResponse extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AdminLoginResponse.AsObject;
   static toObject(includeInstance: boolean, msg: AdminLoginResponse): AdminLoginResponse.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
   static serializeBinaryToWriter(message: AdminLoginResponse, writer: jspb.BinaryWriter): void;
   static deserializeBinary(bytes: Uint8Array): AdminLoginResponse;
   static deserializeBinaryFromReader(message: AdminLoginResponse, reader: jspb.BinaryReader): AdminLoginResponse;
