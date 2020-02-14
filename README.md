@@ -1,2 +1,24 @@
 # lemon-cloud-dashboard-ui
-lemon-cloud-dashboard-ui是柠檬云中心管理服务dashboard的UI可视化界面
+
+## Project setup
+```
+yarn install
+```
+
+### Compiles and hot-reloads for development
+```
+yarn serve
+```
+
+### Compiles and minifies for production
+```
+yarn build
+```
+
+### Lints and fixes files
+```
+yarn lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
