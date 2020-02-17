@@ -1,22 +1,22 @@
-// package: usr_service
-// file: grpc/usr_service/admin.proto
+// package: adm_service
+// file: grpc/adm_service/administrator.proto
 
-import * as grpc_usr_service_admin_pb from "../../grpc/usr_service/admin_pb";
-import * as grpc_usr_dto_admin_pb from "../../grpc/usr_dto/admin_pb";
+import * as grpc_adm_service_administrator_pb from "../../grpc/adm_service/administrator_pb";
+import * as grpc_adm_dto_administrator_pb from "../../grpc/adm_dto/administrator_pb";
 import {grpc} from "@improbable-eng/grpc-web";
 
-type AdminServiceLogin = {
+type AdministratorServiceLogin = {
   readonly methodName: string;
-  readonly service: typeof AdminService;
+  readonly service: typeof AdministratorService;
   readonly requestStream: false;
   readonly responseStream: false;
-  readonly requestType: typeof grpc_usr_dto_admin_pb.AdminLoginRequest;
-  readonly responseType: typeof grpc_usr_dto_admin_pb.AdminLoginResponse;
+  readonly requestType: typeof grpc_adm_dto_administrator_pb.AdministratorLoginRequest;
+  readonly responseType: typeof grpc_adm_dto_administrator_pb.AdministratorLoginResponse;
 };
 
-export class AdminService {
+export class AdministratorService {
   static readonly serviceName: string;
-  static readonly Login: AdminServiceLogin;
+  static readonly Login: AdministratorServiceLogin;
 }
 
 export type ServiceError = { message: string, code: number; metadata: grpc.Metadata }
@@ -47,18 +47,18 @@ interface BidirectionalStream<ReqT, ResT> {
   on(type: 'status', handler: (status: Status) => void): BidirectionalStream<ReqT, ResT>;
 }
 
-export class AdminServiceClient {
+export class AdministratorServiceClient {
   readonly serviceHost: string;
 
   constructor(serviceHost: string, options?: grpc.RpcOptions);
   login(
-    requestMessage: grpc_usr_dto_admin_pb.AdminLoginRequest,
+    requestMessage: grpc_adm_dto_administrator_pb.AdministratorLoginRequest,
     metadata: grpc.Metadata,
-    callback: (error: ServiceError|null, responseMessage: grpc_usr_dto_admin_pb.AdminLoginResponse|null) => void
+    callback: (error: ServiceError|null, responseMessage: grpc_adm_dto_administrator_pb.AdministratorLoginResponse|null) => void
   ): UnaryResponse;
   login(
-    requestMessage: grpc_usr_dto_admin_pb.AdminLoginRequest,
-    callback: (error: ServiceError|null, responseMessage: grpc_usr_dto_admin_pb.AdminLoginResponse|null) => void
+    requestMessage: grpc_adm_dto_administrator_pb.AdministratorLoginRequest,
+    callback: (error: ServiceError|null, responseMessage: grpc_adm_dto_administrator_pb.AdministratorLoginResponse|null) => void
   ): UnaryResponse;
 }
 

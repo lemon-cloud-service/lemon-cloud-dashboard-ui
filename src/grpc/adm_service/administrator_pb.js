@@ -1,4 +1,4 @@
-// source: grpc/usr_service/admin.proto
+// source: grpc/adm_service/administrator.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -12,5 +12,5 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
-var grpc_usr_dto_admin_pb = require('../../grpc/usr_dto/admin_pb.js');
-goog.object.extend(proto, grpc_usr_dto_admin_pb);
+var grpc_adm_dto_administrator_pb = require('../../grpc/adm_dto/administrator_pb.js');
+goog.object.extend(proto, grpc_adm_dto_administrator_pb);
