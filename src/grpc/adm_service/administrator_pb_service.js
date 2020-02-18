@@ -6,9 +6,7 @@ var grpc_adm_dto_administrator_pb = require("../../grpc/adm_dto/administrator_pb
 var grpc = require("@improbable-eng/grpc-web").grpc;
 
 var AdministratorService = (function () {
-  function AdministratorService() {
-  }
-
+  function AdministratorService() {}
   AdministratorService.serviceName = "adm_service.AdministratorService";
   return AdministratorService;
 }());
@@ -18,8 +16,8 @@ AdministratorService.Login = {
   service: AdministratorService,
   requestStream: false,
   responseStream: false,
-  requestType: grpc_adm_dto_administrator_pb.AdministratorLoginRequest,
-  responseType: grpc_adm_dto_administrator_pb.AdministratorLoginResponse
+  requestType: grpc_adm_dto_administrator_pb.AdministratorLoginRequestDto,
+  responseType: grpc_adm_dto_administrator_pb.AdministratorLoginResponseDto
 };
 
 exports.AdministratorService = AdministratorService;

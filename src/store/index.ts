@@ -1,16 +1,15 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import user from './user'
-import NameUtil from '@/utils/NameUtil'
-import StoreDefineLogin from '@/define/store/administrator/login'
+import administrator from './administrator'
 
 Vue.use(Vuex)
 
-let result: any = {}
+const result: any = {}
 
 function findStoreModule(tree: any) {
   Object.keys(tree).forEach(function (key) {
+    // eslint-disable-next-line no-prototype-builtins
     if (tree[key].hasOwnProperty('state')) {
       result[key] = tree[key]
     } else {
@@ -20,14 +19,10 @@ function findStoreModule(tree: any) {
 }
 
 findStoreModule({
-  user
+  administrator
 })
 
-console.log('asdfasdf')
 console.log(result)
-console.log('asdfasdfasd')
-
-console.log(NameUtil.CSCK(StoreDefineLogin.GET_LOGIN_STATE))
 
 export default new Vuex.Store({
   modules: result

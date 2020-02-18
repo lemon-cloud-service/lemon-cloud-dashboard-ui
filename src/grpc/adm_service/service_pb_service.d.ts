@@ -1,22 +1,23 @@
 // package: adm_service
-// file: grpc/adm_service/administrator.proto
+// file: grpc/adm_service/service.proto
 
-import * as grpc_adm_service_administrator_pb from "../../grpc/adm_service/administrator_pb";
-import * as grpc_adm_dto_administrator_pb from "../../grpc/adm_dto/administrator_pb";
+import * as grpc_adm_service_service_pb from "../../grpc/adm_service/service_pb";
+import * as google_protobuf_empty_pb from "google-protobuf/google/protobuf/empty_pb";
+import * as grpc_adm_dto_service_pb from "../../grpc/adm_dto/service_pb";
 import {grpc} from "@improbable-eng/grpc-web";
 
-type AdministratorServiceLogin = {
+type ServiceServiceGetMyServiceList = {
   readonly methodName: string;
-  readonly service: typeof AdministratorService;
+  readonly service: typeof ServiceService;
   readonly requestStream: false;
   readonly responseStream: false;
-  readonly requestType: typeof grpc_adm_dto_administrator_pb.AdministratorLoginRequestDto;
-  readonly responseType: typeof grpc_adm_dto_administrator_pb.AdministratorLoginResponseDto;
+  readonly requestType: typeof google_protobuf_empty_pb.Empty;
+  readonly responseType: typeof grpc_adm_dto_service_pb.AllServiceStatusDto;
 };
 
-export class AdministratorService {
+export class ServiceService {
   static readonly serviceName: string;
-  static readonly Login: AdministratorServiceLogin;
+  static readonly GetMyServiceList: ServiceServiceGetMyServiceList;
 }
 
 export type ServiceError = { message: string, code: number; metadata: grpc.Metadata }
@@ -47,18 +48,18 @@ interface BidirectionalStream<ReqT, ResT> {
   on(type: 'status', handler: (status: Status) => void): BidirectionalStream<ReqT, ResT>;
 }
 
-export class AdministratorServiceClient {
+export class ServiceServiceClient {
   readonly serviceHost: string;
 
   constructor(serviceHost: string, options?: grpc.RpcOptions);
-  login(
-    requestMessage: grpc_adm_dto_administrator_pb.AdministratorLoginRequestDto,
+  getMyServiceList(
+    requestMessage: google_protobuf_empty_pb.Empty,
     metadata: grpc.Metadata,
-    callback: (error: ServiceError|null, responseMessage: grpc_adm_dto_administrator_pb.AdministratorLoginResponseDto|null) => void
+    callback: (error: ServiceError|null, responseMessage: grpc_adm_dto_service_pb.AllServiceStatusDto|null) => void
   ): UnaryResponse;
-  login(
-    requestMessage: grpc_adm_dto_administrator_pb.AdministratorLoginRequestDto,
-    callback: (error: ServiceError|null, responseMessage: grpc_adm_dto_administrator_pb.AdministratorLoginResponseDto|null) => void
+  getMyServiceList(
+    requestMessage: google_protobuf_empty_pb.Empty,
+    callback: (error: ServiceError|null, responseMessage: grpc_adm_dto_service_pb.AllServiceStatusDto|null) => void
   ): UnaryResponse;
 }
 
