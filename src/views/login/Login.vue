@@ -23,8 +23,7 @@ export default class Login extends Vue {
         console.log(resp.token)
         ServiceService.getMyAllService()
           .then((result: AllServiceStatusDto) => {
-            console.log('11112233')
-            console.log(JSON.stringify(result))
+            console.log(result)
           })
           .catch(e => {
             console.log(e)
